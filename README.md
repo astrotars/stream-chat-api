@@ -16,8 +16,8 @@ This API will quickly get you up to speed on best practices for deploying an aut
 ```json
 {
 	"name": {
-		"first": "Nick",
-		"last": "Parsons"
+		"first": "First Name",
+		"last": "Last Name"
 	},
 	"email": "foo@bar.baz",
 	"password": "qux"

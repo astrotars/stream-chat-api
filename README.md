@@ -41,7 +41,7 @@ The following technologies were used to build this application:
 -   Mongoose schema with validation for user profiles
 -   Password validation and hashing with bcrypt
 -   Find or create for users within the MongoDB database
--   Easy deployment to Heroku (optional) or any other environment
+-   Easy deployment to [Heroku](https://heroku.com) (optional) or any other environment
 -   Token generation for existing and new users (for Stream Chat)
 -   Creation of a new channel named `General` if one does not exist
 -   Automatic adding of users to the `General` channel

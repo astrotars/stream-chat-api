@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "Stream Chat Boilerplate API",
 	"engines": {
-		"node": ">=11.14.0"
+		"node": ">=12.13.0"
 	},
 	"scripts": {
 		"postinstall": "rm -rf dist && yarn run build",

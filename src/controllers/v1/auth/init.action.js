@@ -29,7 +29,7 @@ exports.init = async (req, res) => {
 
 		const client = new StreamChat(apiKey, apiSecret);
 
-		// if the channel does not exist, this create a new channel (e.g. initialization)
+		// if the channel does not exist, this creates a new channel (e.g. initialization)
 		const channel = await client.channel('messaging', 'General');
 
 		// if the user does not exist, create a new user

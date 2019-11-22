@@ -26,7 +26,7 @@ This API will quickly get you up to speed on best practices for deploying an aut
 
 ## Technology Used
 
-The following technologies were used to build this application:
+The following technologies were used to build this API:
 
 -   [Node.js](https://nodejs.org)
 -   [Express](https://expressjs.com/)

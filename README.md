@@ -71,3 +71,22 @@ The easiest method to deploy this API to Heroku is to click the deploy button be
 > Note: You will need to spin up a MongoDB cluster and add your MongoDB URI to your environment variables under the `Settings` section of your applications dashboard on Heroku. Ensure that the environment variable is named `MONGODB_URI`. For local installations, you will need to add your MongoDB URI to the `.env` file in the root of this project.
 
 ![Heroku Settings](https://i.imgur.com/YtjurK9.png)
+
+## Anatomy
+
+```
+├── controllers
+│   └── v1
+│       └── auth
+│           ├── index.js
+│           └── init.action.js
+├── index.js
+├── models
+│   └── user.js
+├── routes
+│   └── init.js
+└── utils
+    ├── controllers.js
+    └── db
+        └── index.js
+```

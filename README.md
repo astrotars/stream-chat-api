@@ -1,4 +1,4 @@
-# Example API in Node.js for Stream Chat
+# Example API in Node.js for Stream Chat 💬
 
 ## Overview
 

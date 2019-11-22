@@ -52,7 +52,7 @@ Please see below for installation requirements.
 ## Requirements
 
 -   Node.js (latest)
--   Yarn
+-   Yarn (latest)
 
 ## Deployment
 

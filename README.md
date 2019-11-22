@@ -11,7 +11,7 @@ This API will quickly get you up to speed on best practices for deploying an aut
 3. Run yarn to install dependencies `cd stream-chat-api && yarn`
 4. Create a `.env` file and reference the `.env.example` file
 5. Start the API with `yarn dev` for development mode or `yarn start` for production mode
-6. Use [Postman]() to hit the API on port `8080` (e.g. `http://localhost:8080/v1/auth/init`) with the following JSON payload:
+6. Use [Postman](https://www.getpostman.com/) to hit the API on port `8080` (e.g. `http://localhost:8080/v1/auth/init`) with the following JSON payload:
 
 ```json
 {

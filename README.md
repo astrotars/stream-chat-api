@@ -51,6 +51,11 @@ Please see below for installation requirements.
 
 ## Requirements
 
+-   Node.js (latest)
+-   Yarn
+
+## Deployment
+
 This section covers the various requirements for deploying this API in different environments. When in doubt, have a look at the `.env.example` file which outlines what required variables you will need to supply in order for the API to run properly.
 
 ### Heroku

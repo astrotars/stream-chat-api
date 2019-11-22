@@ -33,6 +33,7 @@ The following technologies were used to build this application:
 -   [MongoDB Atlas](https://atlas.mongodb.com)
 -   [Mongoose](https://mongoosejs.com/)
 -   [Stream Chat](https://getstream.io/chat/)
+-   [Stream Chat JS Library](https://www.npmjs.com/package/stream-chat)
 
 ## Support
 

@@ -4,6 +4,26 @@
 
 This API will quickly get you up to speed on best practices for deploying an auth API for [Stream Chat](https://getstream.io/chat/). The API can be deployed Heroku with a single click or to any other hosting environment that supports Node.js.
 
+## Quick Instructions (localhost)
+
+1. Create an account with [Stream](https://getstream.io/chat/)
+2. Clone repo with `git clone git@github.com:nparsons08/stream-chat-api.git`
+3. Run yarn to install dependencies `cd stream-chat-api && yarn`
+4. Create a `.env` file and reference the `.env.example` file
+5. Start the API with `yarn dev` for development mode or `yarn start` for production mode
+6. Use [Postman]() to hit the API on port `8080` (e.g. `http://localhost:8080/v1/auth/init`) with the following JSON payload:
+
+```json
+{
+	"name": {
+		"first": "Nick",
+		"last": "Parsons"
+	},
+	"email": "foo@bar.baz",
+	"password": "qux"
+}
+```
+
 ## Technology Used
 
 The following technologies were used to build this application:
@@ -14,7 +34,7 @@ The following technologies were used to build this application:
 -   [Mongoose](https://mongoosejs.com/)
 -   [Stream Chat](https://getstream.io/chat/)
 
-## Support:
+## Support
 
 -   User storage via MongoDB database
 -   Mongoose schema with validation for user profiles

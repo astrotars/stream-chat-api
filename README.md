@@ -1,25 +1,47 @@
-# Stream Chat Boilerplate API
+# Example API in Node.js for Stream Chat
 
-> **_This API is not meant for production as there is no auth in place. Please use carefully in testing and development environments only!_**
+## Overview
 
-## Getting Started
+This API will quickly get you up to speed on best practices for deploying an auth API for [Stream Chat](https://getstream.io/chat/). The API can be deployed Heroku with a single click or to any other hosting environment that supports Node.js.
 
-To spin this up, clone it and run `yarn install` within the root directory, then run `yarn start`. Create a `.env` file within the main directory with the following environment variables found on https://getstream.io/dashboard:
+## Technology Used
 
-```
-NODE_ENV=production
-PORT=8080
+The following technologies were used to build this application:
 
-STREAM_API_KEY=<YOUR_API_KEY>
-STREAM_API_SECRET=<YOUR_API_SECRET>
-```
+-   [Node.js](https://nodejs.org)
+-   [Express](https://expressjs.com/)
+-   [MongoDB Atlas](https://atlas.mongodb.com)
+-   [Mongoose](https://mongoosejs.com/)
+-   [Stream Chat](https://getstream.io/chat/)
 
-> Note: You can reference `.env.example`.
+## Support:
 
-## To spin up the API, click the Deploy with Heroku button below!
+-   User storage via MongoDB database
+-   Mongoose schema with validation for user profiles
+-   Password validation and hashing with bcrypt
+-   Find or create for users within the MongoDB database
+-   Easy deployment to Heroku (optional) or any other environment
+-   Token generation for existing and new users (for Stream Chat)
+-   Creation of a new channel named `General` if one does not exist
+-   Automatic adding of users to the `General` channel
+-   Heavily commented modern JavaScript
 
-Alternatively, you can spin up the API using Heroku. This Heroku deploy button will autodeploy the API as well as provision a chat trial with Stream. The environment variables will be automatically added to the project. This is by far the easiest way to get up and running.
+Please see below for installation requirements.
 
-<a href="https://heroku.com/deploy?template=https://github.com/nparsons08/stream-chat-boilerplate-api" target="_blank">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
+## Requirements
+
+This section covers the various requirements for deploying this API in different environments. When in doubt, have a look at the `.env.example` file which outlines what required variables you will need to supply in order for the API to run properly.
+
+### Heroku
+
+The easiest method to deploy this API to Heroku is to click the deploy button below:
+
+<p>
+  <a href="https://heroku.com/deploy?template=https://github.com/nparsons08/stream-chat-api" target="_blank">
+    <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+  </a>
+</p>
+
+> Note: You will need to spin up a MongoDB cluster and add your MongoDB URI to your environment variables under the `Settings` section of your applications dashboard on Heroku. Ensure that the environment variable is named `MONGODB_URI`. For local installations, you will need to add your MongoDB URI to the `.env` file in the root of this project.
+
+_[MongoDB Atlas](https://atlas.mongodb.com) provides 100% free shared clusters to all customers on various cloud providers such as AWS, GCP, and Azure._

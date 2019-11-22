@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import findOneOrCreate from 'mongoose-findoneorcreate';
 import bcrypt from 'mongoose-bcrypt';
 import timestamps from 'mongoose-timestamp';
 
@@ -28,16 +29,13 @@ export const UserSchema = new Schema(
 			required: true,
 			bcrypt: true,
 		},
-		admin: {
-			type: Boolean,
-			default: false,
-		},
 	},
 	{
 		collection: 'users',
 	}
 );
 
+UserSchema.plugin(findOneOrCreate);
 UserSchema.plugin(bcrypt);
 UserSchema.plugin(timestamps);
 

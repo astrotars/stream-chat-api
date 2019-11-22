@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 import fs from 'fs';
@@ -8,6 +9,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
+
+import './utils/db';
 
 const api = express();
 
@@ -19,7 +22,7 @@ api.use(bodyParser.json());
 
 api.listen(process.env.PORT, error => {
 	if (error) {
-		console.warn(error);
+		console.warn('Database connection error.', new Error(error));
 		process.exit(1);
 	}
 
@@ -29,9 +32,7 @@ api.listen(process.env.PORT, error => {
 	});
 
 	console.info(
-		`Running on port ${process.env.PORT} in ${
-			process.env.NODE_ENV
-		} mode. 🚀`
+		`API is now running on port ${process.env.PORT} in ${process.env.NODE_ENV} mode. 👨‍🚀`
 	);
 });
 

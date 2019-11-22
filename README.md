@@ -6,7 +6,7 @@ This API will quickly get you up to speed on best practices for deploying an aut
 
 ## Quick Instructions (localhost)
 
-1. Create an account with [Stream](https://getstream.io/chat/)
+1. Create an free chat trial with [Stream](https://getstream.io/chat/)
 2. Clone repo with `git clone git@github.com:nparsons08/stream-chat-api.git`
 3. Run yarn to install dependencies `cd stream-chat-api && yarn`
 4. Create a `.env` file and reference the `.env.example` file

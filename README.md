@@ -4,6 +4,8 @@
 
 This API will quickly get you up to speed on best practices for deploying an auth API for [Stream Chat](https://getstream.io/chat/). The API can be deployed Heroku with a single click or to any other hosting environment that supports Node.js.
 
+> Note: This API does not contain auth, therefore it is not escure _at this time_. I'll be adding an auth layer shortly but until then, you can easily add your own with a JWT token.
+
 ## Quick Instructions (localhost)
 
 1. Create an free chat trial with [Stream](https://getstream.io/chat/)
@@ -71,6 +73,8 @@ The easiest method to deploy this API to Heroku is to click the deploy button be
 > Note: You will need to spin up a MongoDB cluster and add your MongoDB URI to your environment variables under the `Settings` section of your applications dashboard on Heroku. Ensure that the environment variable is named `MONGODB_URI`. For local installations, you will need to add your MongoDB URI to the `.env` file in the root of this project.
 
 ![Heroku Settings](https://i.imgur.com/YtjurK9.png)
+
+> Note: A Dockerfile is also available with associated scripts located in the `scripts` directory. Use this if you would like to deply to AWS/GCP/Kubernetes.
 
 ## Anatomy
 

@@ -74,7 +74,7 @@ The easiest method to deploy this API to Heroku is to click the deploy button be
 
 ![Heroku Settings](https://i.imgur.com/YtjurK9.png)
 
-> Note: A Dockerfile is also available with associated scripts located in the `scripts` directory. Use this if you would like to deply to AWS/GCP/Kubernetes.
+> Note: A Dockerfile is also available with associated scripts located in the `scripts` directory. Use this if you would like to deply to AWS/GCP/Kubernetes. Be sure to add your environment variables to your environment otherwise the Docker build will fail to deploy.
 
 ## Anatomy
 

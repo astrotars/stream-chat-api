@@ -83,13 +83,13 @@ The easiest method to deploy this API to Heroku is to click the deploy button be
 > Note: Be sure to add your environment variables as shown below and in the `.env.example` file or your build will fail.
 
 ```
-NODE_ENV=development # set to production on heroku or any other environment
-PORT=8080 # ensure that the port environment variable is set on heroku or any other environment (e.g. 443)
+NODE_ENV=development
+PORT=8080
 
-STREAM_API_KEY=<YOUR_STREAM_API_KEY> # can be found at https://getstreaml.io/dashboard
-STREAM_API_SECRET=<YOUR_STREAM_API_SECRET> # can be found at https://getstreaml.io/dashboard
+STREAM_API_KEY=YOUR_STREAM_API_KEY
+STREAM_API_SECRET=YOUR_STREAM_API_SECRET
 
-MONGODB_URI=<YOUR_MONGODB_URI> # mongodb atlas is recommended at https://atlas.mongodb.com
+MONGODB_URI=YOUR_MONGODB_URI
 ```
 
 ## Anatomy

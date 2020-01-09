@@ -56,6 +56,14 @@ exports.init = async (req, res) => {
 			// add the new user to the general channel using their member id
 			await channel.addMembers([user._id]);
 
+			// update the users role (admin, channel_member, guest, etc.)
+			await serverClient.updateUsers([
+				{
+					id: user._id,
+					role: 'admin', // https://getstream.io/chat/docs/js/#update_users
+				},
+			]);
+
 			// sanitize / remove password
 			delete user.password;
 

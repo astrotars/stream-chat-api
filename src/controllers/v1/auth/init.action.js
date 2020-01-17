@@ -32,37 +32,41 @@ exports.init = async (req, res) => {
 		// if the channel does not exist, this creates a new channel (e.g. initialization)
 		const channel = await client.channel('messaging', 'General');
 
-		// if the user does not exist, create a new user
-		let user = await User.findOneOrCreate(
-			{ email: data.email }, // lowercase email to avoid lookup issues
-			{
+		// Lookup the user in the database
+		let user = await User.findOne(
+			{ email: data.email } // lowercase email to avoid lookup issues
+		);
+
+		// if the user does not exist
+		if (!user) {
+			// Create a new user
+			let user = await User.create({
 				name: {
 					first: data.name.first,
 					last: data.name.last,
 				},
 				email: data.email, // email is set to lowercase automatically by mongoose via model
 				password: data.password, // password is hashed using bcrypt automatically by mongoose plugin
-			}
-		);
+			});
 
-		// convert mongoose object to raw object (we can't do this with doc.toObject() because we're using a plugin)
-		user = omit(user._doc, ['__v', 'createdAt', 'updatedAt']); // and remove data we don't need with the lodash omit
+			console.log(user);
 
-		// if the user does not exist
-		if (!user) {
+			// convert mongoose object to raw object (we can't do this with doc.toObject() because we're using a plugin)
+			user = omit(user._doc, ['__v', 'createdAt', 'updatedAt']); // and remove data we don't need with the lodash omit
+
 			// generate a new token based on the users unique database id (e.g. member.id)
 			const token = client.createToken(user._id.toString());
 
-			// add the new user to the general channel using their member id
-			await channel.addMembers([user._id]);
-
 			// update the users role (admin, channel_member, guest, etc.)
-			await channel.updateUsers([
+			await client.updateUsers([
 				{
 					id: user._id,
 					role: 'admin', // https://getstream.io/chat/docs/js/#update_users
 				},
 			]);
+
+			// add the new user to the general channel using their member id
+			await channel.addMembers([user._id]);
 
 			// sanitize / remove password
 			delete user.password;
@@ -81,6 +85,8 @@ exports.init = async (req, res) => {
 
 		// generate token using the unique database id
 		const token = client.createToken(user._id.toString());
+
+		user = omit(user._doc, ['__v', 'createdAt', 'updatedAt']);
 
 		// sanitize / remove password
 		delete user.password;

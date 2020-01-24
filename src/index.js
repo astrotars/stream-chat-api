@@ -5,7 +5,6 @@ dotenv.config();
 import fs from 'fs';
 import path from 'path';
 import express from 'express';
-import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
@@ -17,9 +16,7 @@ const api = express();
 api.use(cors());
 api.use(compression());
 api.use(helmet());
-api.use(bodyParser.urlencoded({ extended: true }));
-api.use(bodyParser.json());
-
+api.use(express.json())
 api.listen(process.env.PORT, error => {
 	if (error) {
 		console.warn('Database connection error.', new Error(error));

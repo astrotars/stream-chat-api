@@ -49,8 +49,6 @@ exports.init = async (req, res) => {
 				password: data.password, // password is hashed using bcrypt automatically by mongoose plugin
 			});
 
-			console.log(user);
-
 			// convert mongoose object to raw object (we can't do this with doc.toObject() because we're using a plugin)
 			user = omit(user._doc, ['__v', 'createdAt', 'updatedAt']); // and remove data we don't need with the lodash omit
 

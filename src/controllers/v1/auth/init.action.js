@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import omit from 'lodash.omit';
 import { StreamChat } from 'stream-chat';
 

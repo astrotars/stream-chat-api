@@ -3,10 +3,15 @@
 	"description": "Stream Chat Boilerplate API",
 	"logo": "https://avatars3.githubusercontent.com/u/8597527",
 	"website": "https://getstream.io/chat/",
-	"repository": "https://github.com/nparsons08/stream-chat-boilerplate-api",
+	"repository": "https://github.com/nparsons08/stream-chat-api",
 	"success_url": "https://getstream.io/chat/",
-	"keywords": [ "stream", "chat", "api", "express" ],
-	"addons": [ "stream:chat-trial" ],
+	"keywords": [ "stream", "chat", "api", "express", "oss" ],
+	"addons": [
+		{
+			"plan": "stream:chat-trial",
+			"as": "STREAM"
+		}
+	],
 	"buildpacks": [
 		{
 			"url": "heroku/nodejs"

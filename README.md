@@ -1,4 +1,4 @@
-# Open-Source API in Node.js for Stream Chat 💬
+# No Frills Open-Source API in Node.js for Stream Chat 💬
 
 ## Overview
 

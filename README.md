@@ -125,6 +125,8 @@ curl --location --request POST 'http://localhost:8080/v1/auth/init' \
 ├── routes
 │   └── init.js
 └── utils
+    ├── auth
+    │   └── index.js
     ├── controllers.js
     └── db
         └── index.js
